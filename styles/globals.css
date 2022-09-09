@@ -1,26 +1,587 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root {
+  --clr-accent-100: #e0e0e0e0;
+  --clr-accent-500: #f7931a;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-100: #ccc;
+  --clr-neutral-400: #999;
+  --clr-neutral-500: #777;
+  --clr-neutral-700: #111;
+  --clr-neutral-900: #000;
+
+  /* --ff-primary: "Trispace", sans-serif; */
+  /* --ff-primary: "Roboto", sans-serif; */
+  --ff-primary: "Titillium Web", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-small: 500;
+  --fw-regular: 600;
+  --fw-semi-bold: 700;
+  --fw-bold: bold;
+
+  --fs-100: 0.75rem;
+  --fs-200: 0.8125rem;
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+
+  --fs-body: var(--fs-200);
+  --fs-primary-heading: var(--fs-700);
+  --fs-secondary-heading: var(--fs-600);
+  --fs-tertiary-heading: var(--fs-500);
+  --fs-nav: var(--fs-200);
+  --fs-attribution: var(--fs-100);
+
+  --size-100: 0.25rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.5rem;
+  --size-600: 2rem;
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 10rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* larger font-sizes on desktop */
+@media (min-width: 50em) {
+  /* 800px */
+  :root {
+    --fs-body: var(--fs-400);
+    --fs-nav: var(--fs-400);
+  }
 }
 
-* {
+/* CSS RESET */
+/* Andy Bell's CSS reset w/ a few small changes: https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Remove default margin */
+/* This is changed per Kevin Powell: https://youtu.be/h3bTwCqX4ns  */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* This is changed per Kevin Powell: https://youtu.be/h3bTwCqX4ns  */
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  /* This is changed per Kevin Powell: https://youtu.be/h3bTwCqX4ns  */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
   }
-  body {
-    color: white;
-    background: black;
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GENERAL STYLING */
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-neutral-100);
+
+  background-color: var(--clr-neutral-700);
+  min-height: 100vh;
+}
+
+/* website layout */
+.layout {
+  /* to push footer to bottom when main material isn't large enough to fill screen */
+  min-height: calc(100vh - 67px - 56px);
+}
+
+.aside {
+  display: none;
+
+  max-width: 250px;
+  min-width: 250px;
+  border-right: 1px solid var(--clr-neutral-500);
+}
+
+.main {
+  width: 100%;
+}
+
+/* header */
+.header-primary {
+  border-bottom: 1px solid var(--clr-neutral-500);
+}
+
+.header-site-name a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+
+.header-site-name a:hover {
+  color: var(--clr-accent-500);
+}
+
+.header-link {
+  width: 30px;
+}
+
+@media (min-width: 50em) {
+  .header-link {
+    width: 35px;
+  }
+}
+
+/* navigation */
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+
+  .mobile-nav-toggle .icon-close {
+    /* display: none; */
+  }
+}
+
+@media (min-width: 50em) {
+  .aside {
+    display: block;
+  }
+
+  .header-nav {
+    display: none;
+  }
+}
+
+.nav-list li {
+  padding: var(--size-200);
+  cursor: pointer;
+  border-radius: 0.25em;
+  text-transform: capitalize;
+}
+
+.nav-list li:hover {
+  background-color: var(--clr-accent-500);
+  opacity: 0.75;
+}
+
+.current-link {
+  background-color: var(--clr-accent-500);
+}
+
+/* main */
+
+.banner {
+  width: 100%;
+  margin: auto;
+}
+
+.banner-attribution {
+  font-style: italic;
+  text-decoration: none;
+  color: inherit;
+}
+
+.banner-attribution:hover {
+  color: #f7931a;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  color: #f7931a;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+@media (min-width: 50em) {
+  .title {
+    display: block;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.guide-img {
+  /* padding-top: 1rem; */
+  max-width: 600px;
+  margin: auto;
+}
+
+.youtube-container-small {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  /* padding-top: 1rem; */
+  padding-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.youtube-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /* padding-top: 1rem; */
+  /* padding-bottom: 1rem; */
+}
+
+.trial {
+  font-style: italic;
+  padding: 2em;
+}
+
+.trial li {
+  color: var(--clr-neutral-100);
+  padding: none;
+}
+
+.content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  padding-bottom: 1em;
+  /* margin-bottom: 1rem; */
+}
+
+.content a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+.content a:hover {
+  color: #f7931a;
+}
+
+.content ul {
+  list-style: none;
+  list-style: disc;
+  padding-left: 2rem;
+  /* padding-bottom: 1rem; */
+  color: #f7931a;
+}
+
+.content li {
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* .content li + li {
+  padding-top: 3rem;
+} */
+
+.content h3 {
+  font-size: 1.2rem;
+  /* padding-top: 1rem; */
+  color: #f7931a;
+}
+
+.quote {
+  font-style: italic;
+  /* max-width: 400px; */
+  /* padding: var(--size-400); */
+  padding-left: var(--size-400);
+  padding-right: var(--size-400);
+}
+
+.quote-list {
+  font-style: italic;
+  padding-left: var(--size-400);
+  padding-right: var(--size-400);
+}
+
+.quote-list li {
+  font-size: var(--fs-body);
+  color: var(--clr-accent-100);
+}
+
+.attribution {
+  font-style: italic;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.guideLinks {
+  /* padding-top: 2rem; */
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+  color: #f7931a;
+
+  text-transform: capitalize;
+}
+
+.guideLinks:hover {
+  color: orange;
+  opacity: 0.8;
+}
+
+.carrot {
+  width: 70px;
+}
+
+/* footer */
+.footer {
+  border-top: 1px solid var(--clr-neutral-500);
+}
+
+/* UTILITY CLASSES */
+
+/* https://a11y-guidelines.orange.com/en/web/components-examples/accessible-hiding/ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: no-wrap;
+  border: 0;
+}
+
+.container {
+  /* max-width: 1200px; */
+  max-width: 1000px;
+  margin: auto;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.gap-200 {
+  gap: var(--size-200);
+}
+
+.gap-400 {
+  gap: var(--size-400);
+}
+
+.gap-600 {
+  gap: var(--size-600);
+}
+
+.gap-700 {
+  gap: var(--size-700);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-small {
+  font-weight: var(--fw-small);
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+  line-height: 1.1;
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+  line-height: 1.1;
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fs-attribution {
+  font-size: var(--fs-attribution);
+}
+
+.padding-300 {
+  padding: var(--size-300);
+}
+
+.padding-400 {
+  padding: var(--size-400);
+}
+
+.padding-500 {
+  padding: var(--size-500);
+}
+
+.padding-top-400 {
+  padding-top: var(--size-400);
+}
+
+.padding-bottom-400 {
+  padding-bottom: var(--size-400);
+}
+
+.padding-top-800 {
+  padding-top: var(--size-800);
+}
+
+.margin-bottom-200 {
+  margin-bottom: var(--size-200);
+}
+
+.margin-bottom-400 {
+  margin-bottom: var(--size-400);
+}
+
+.margin-bottom-500 {
+  margin-bottom: var(--size-500);
+}
+
+.margin-bottom-700 {
+  margin-bottom: var(--size-700);
+}
+
+.margin-top-600 {
+  margin-top: var(--size-600);
+}
+
+.margin-top-900 {
+  margin-top: var(--size-900);
+}
+
+.margin-top-900x3 {
+  margin-top: calc(var(--size-900) * 3);
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.color-accent-500 {
+  color: var(--clr-accent-500);
+}
+
+.link-hover:hover {
+  cursor: pointer;
+  color: var(--clr-accent-500);
+}
+
+.inherit-color {
+  color: inherit;
+}
+
+@media (max-width: 50em) {
+  .hidden-on-mobile {
+    display: none;
   }
 }
