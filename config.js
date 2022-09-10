@@ -1,7 +1,3 @@
-const dev = process.env.NODE_ENV !== "production";
-
-export const server = dev ? "http://localhost:3000" : "https://downtherabbithodl.guide";
-
 export const navLinks = {
   home: "/",
   "what is money": "/what-is-money",
