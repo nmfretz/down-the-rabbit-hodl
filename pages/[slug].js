@@ -29,7 +29,7 @@ export default function PostPage({
 
         <h1 className="title">{title}</h1>
         <div className="content" dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-        <div className="display-flex justify-content-space-between padding-400">
+        <div className="display-flex justify-content-space-between padding-top-400">
           <Link href={`${navLinks[prev_page]}`} passHref>
             <div className="guideLinks | display-flex align-items-center">
               <img className="carrot" src="/carrot-left2.png" />
@@ -37,15 +37,17 @@ export default function PostPage({
               <span className="hidden-on-mobile">{` (${prev_page})`}</span>
             </div>
           </Link>
-          <Link href={`${navLinks[next_page]}`} passHref>
-            <div className="guideLinks | display-flex align-items-center">
-              <p>
-                <span>Next </span>
-                <span className="hidden-on-mobile">{`(${next_page})`}</span>
-              </p>
-              <img className="carrot" src="/carrot-right2.png" />
-            </div>
-          </Link>
+          {navLinks[next_page] && (
+            <Link href={`${navLinks[next_page]}`} passHref>
+              <div className="guideLinks | display-flex align-items-center">
+                <p>
+                  <span>Next </span>
+                  <span className="hidden-on-mobile">{`(${next_page})`}</span>
+                </p>
+                <img className="carrot" src="/carrot-right2.png" />
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </>

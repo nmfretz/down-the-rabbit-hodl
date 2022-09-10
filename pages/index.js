@@ -87,10 +87,13 @@ export default function Home() {
           ></iframe>
         </div>
 
-        <div className="display-flex justify-content-end padding-400">
+        <div className="display-flex justify-content-end padding-top-400">
           <Link href={navLinks["what is money"]} passHref>
             <div className="guideLinks | display-flex align-items-center">
-              <p>Next (What is Money)</p>
+              <p>
+                <span>Next </span>
+                <span className="hidden-on-mobile">(What is Money?)</span>
+              </p>
               <img className="carrot" src="/carrot-right2.png" />
             </div>
           </Link>
