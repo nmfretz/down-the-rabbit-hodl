@@ -1,5 +1,6 @@
 ---
 title: "bitcoin protocol"
+order: 3
 cover_image: "/banner-bitcoin_cropped.jpg"
 cover_image_attribution: "Source: need a source"
 cover_image_href: "https://waitbutwhy.com/2019/12/political-disney-world.html"
@@ -87,7 +88,7 @@ Now read the original Bitcoin whitepaper. The technical jargon will likely be co
 
 ## Taking a Non-Technical Break
 
-Before delving further into the technical details of Bitcoin, I highly recommend watching the following three talks by Andreas Antonopoulos that provide non-technical context around why Bitcoin matters (obviously subjective). In my opinion, no one is a better communicator of this concept than Andreas Antonopoulos. The timstamps shown next to the video titles below are the length of the talks excluding the question and answer periods.
+Before delving further into the technical details of Bitcoin, I highly recommend watching the following three talks by Andreas Antonopoulos that provide non-technical context around why Bitcoin matters (obviously subjective). In my opinion, no one is a better communicator of this concept than Andreas Antonopoulos. The timestamps shown next to the video titles below are the length of the talks excluding the question and answer periods.
 
 <div class="youtube-container-small">
 

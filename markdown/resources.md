@@ -1,5 +1,6 @@
 ---
 title: "resources"
+order: ""
 # cover_image: "/banner-bitcoin-cropped.jpg"
 # cover_image_attribution: "image attribution here"
 cover_image_alt: ""

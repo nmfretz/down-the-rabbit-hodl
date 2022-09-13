@@ -1,5 +1,6 @@
 ---
 title: "cypherpunks and digital money"
+order: 2
 cover_image: "/banner-cypherpunks_cropped.jpg"
 cover_image_attribution: "Source: image attribution here"
 cover_image_href: "#"

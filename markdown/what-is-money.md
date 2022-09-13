@@ -1,5 +1,6 @@
 ---
 title: "what is money?"
+order: 1
 cover_image: "/banner-what-is-money_cropped.jpg"
 cover_image_attribution: "Mickey's Christmas Carol - Credit: IMDB"
 cover_image_href: "https://www.imdb.com/title/tt0085936/mediaviewer/rm3403986177/?ref_=tt_md_11"

@@ -1,5 +1,6 @@
 ---
 title: "blockchain"
+order: 4
 cover_image: "/banner-bitcoin_cropped.jpg"
 cover_image_attribution: "image attribution here"
 cover_image_alt: ""
@@ -8,7 +9,8 @@ next_page: "keys, addresses, & wallets"
 ---
 
 Coming soon...
-Maybe the blockchain vs bullshit talk should go here
+
+<!-- Maybe the blockchain vs bullshit talk should go here
 
 <div class="youtube-container-small">
 <div>
@@ -25,4 +27,4 @@ Maybe the blockchain vs bullshit talk should go here
 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/xIDL_akeras" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </div>
 </div>
-</div>
+</div> -->

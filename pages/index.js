@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-
 import Link from "next/link";
+
 import { navLinks } from "../config";
+import { DesktopNav } from "../components/DesktopNav";
 
 export default function Home() {
   return (
@@ -10,18 +10,25 @@ export default function Home() {
       <Head>
         <title>Down the Rabbit Hodl</title>
       </Head>
-      <div className="container padding-400">
-        <img className="banner" src="/banner-home_cropped.jpg" alt="alice in wonderland" />
-        <a className="banner-attribution" href="">
-          Alice in Wonderland Art - Credit: Unknown
-        </a>
-
+      <div className="container">
+        <h1 className="title">
+          a guide to learning about Bitcoin
+          {/* <span className="subtitle">a guide to learning about Bitcoin</span> */}
+        </h1>
+        <DesktopNav order={""} title={"home"} />
         <div className="content">
-          <h1 className="title">
-            <span>Down The Rabbit Hodl - </span>
-            <span className="subtitle">a guide to learning about Bitcoin</span>
-          </h1>
-          <p>
+          <div className="banner-container">
+            <img className="banner-img" src="/banner-home_cropped.jpg" alt="alice in wonderland" />
+            <a
+              className="attribution"
+              href="https://www.dreamstime.com/stock-illustration-falling-alice-down-rabbit-hole-image78805336#_"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Falling Alice - Credit: Anna Velichkovsky
+            </a>
+          </div>
+          <p className="">
             Welcome! This website serves as a compiled guide to learning about Bitcoin. It is not an exhaustive list of
             resources, but rather a curated list of materials that were formative for me. I am by no means a subject
             matter expert on Bitcoin, nor am I advocating for investing in Bitcoin. This website is purely educational.
@@ -90,14 +97,14 @@ export default function Home() {
           ></iframe>
         </div>
 
-        <div className="display-flex justify-content-end padding-top-400">
+        <div className="guide-links-container guide-links-container-home">
           <Link href={navLinks["what is money"]} passHref>
-            <div className="guideLinks | display-flex align-items-center">
+            <div className="guide-link">
               <p>
                 <span>Next </span>
                 <span className="hidden-on-mobile">(What is Money?)</span>
               </p>
-              <img className="carrot" src="/carrot-right2.png" />
+              <img className="carrot-icon" src="/carrot-right2.png" />
             </div>
           </Link>
         </div>
