@@ -3,14 +3,16 @@ title: "bitcoin protocol"
 cover_image: "/banner-bitcoin_cropped.jpg"
 cover_image_attribution: "Source: need a source"
 cover_image_href: "https://waitbutwhy.com/2019/12/political-disney-world.html"
+cover_image_alt: ""
 prev_page: "cypherpunks & digital money"
-next_page: "blockchain & mining"
+next_page: "blockchain"
 ---
 
 Congratulations on making it all the way to the Bitcoin Protocol section! By now, you should realize that Bitcoin wasn't a random phenomenon that was invented out of the blue, but was instead built on the shoulders of giants and created to solve a specific problem.
 
-<img src="/bitcoin-prehistory.jpg"/>
-<p><a class="attribution" href="https://twitter.com/AnselLindner" target="_blank rel="noreferrer"">Source: Ansel Lindner</a></p>
+<a href="/bitcoin-prehistory.jpg" target="_blank"><img src="/bitcoin-prehistory.jpg" /></a>
+
+<p><a class="attribution" href="https://twitter.com/AnselLindner" target="_blank" rel="noreferrer">Source: Ansel Lindner</a></p>
 
 Before learning in detail about the individual components of the Bitcoin Protocol, I think it is best to have a general understanding of what Bitcoin is as a whole. Without this general understanding, it is difficult to see how the topic you are learning about fits into the bigger picture. With that in mind, watch the two videos below that do a fantastic job directly describing what Bitcoin is without introducing confusing analogies or focusing on price. Do not worry if some of the concepts seem confusing at this point, we will be diving into them later in the guide.
 

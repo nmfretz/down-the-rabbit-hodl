@@ -7,7 +7,7 @@ import { navLinks } from "../config";
 import Head from "next/head";
 
 export default function PostPage({
-  frontmatter: { title, cover_image, cover_image_attribution, cover_image_href, prev_page, next_page },
+  frontmatter: { title, cover_image, cover_image_attribution, cover_image_href, cover_image_alt, prev_page, next_page },
   slug,
   content,
 }) {
@@ -22,7 +22,7 @@ export default function PostPage({
         <title>{capitalizedTitle}</title>
       </Head>
       <div className="container padding-400">
-        <img className="banner" src={cover_image} />
+        <img className="banner" src={cover_image} alt={cover_image_alt} />
         <a className="banner-attribution" href={cover_image_href} target="_blank" rel="noreferrer">
           {cover_image_attribution}
         </a>

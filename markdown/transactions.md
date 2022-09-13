@@ -2,7 +2,9 @@
 title: "sending & receiving transactions"
 # cover_image: "/banner-bitcoin-cropped.jpg"
 # cover_image_attribution: "image attribution here"
-prev_page: "wallets & keys"
+cover_image_alt: ""
+
+prev_page: "nodes & miners"
 next_page: "energy debate"
 ---
 

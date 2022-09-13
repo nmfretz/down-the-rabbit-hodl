@@ -1,9 +1,11 @@
 ---
-title: "nodes versus miners"
+title: "keys, addresses, & wallets"
 # cover_image: "/banner-bitcoin-cropped.jpg"
 # cover_image_attribution: "image attribution here"
-prev_page: "blockchain & mining"
-next_page: "wallets & keys"
+cover_image_alt: ""
+
+prev_page: "blockchain"
+next_page: "nodes & miners"
 ---
 
 Coming soon...

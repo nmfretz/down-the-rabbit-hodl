@@ -3,6 +3,7 @@ title: "cypherpunks and digital money"
 cover_image: "/banner-cypherpunks_cropped.jpg"
 cover_image_attribution: "Source: image attribution here"
 cover_image_href: "#"
+cover_image_alt: ""
 prev_page: "what is money"
 next_page: "bitcoin protocol"
 ---

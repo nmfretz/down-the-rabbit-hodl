@@ -11,7 +11,7 @@ export default function Home() {
         <title>Down the Rabbit Hodl</title>
       </Head>
       <div className="container padding-400">
-        <img className="banner" src="/banner-home_cropped.jpg" />
+        <img className="banner" src="/banner-home_cropped.jpg" alt="alice in wonderland" />
         <a className="banner-attribution" href="">
           Alice in Wonderland Art - Credit: Unknown
         </a>
@@ -35,7 +35,10 @@ export default function Home() {
           </p>
 
           <div className="guide-img">
-            <img src="/conviction-knowledge.jpg" />
+            <a href="/conviction-knowledge.jpg" target="_blank">
+              <img src="/conviction-knowledge.jpg" />
+            </a>
+
             <p>
               <a
                 className="attribution"
@@ -49,8 +52,8 @@ export default function Home() {
           </div>
 
           <p>
-            My goal is that by the end of this guide you will understand, in detail, the underlying concepts in the
-            following descriptions of Bitcoin.
+            My goal is that by the end of this guide you will understand, in detail, the following descriptions of
+            Bitcoin.
           </p>
 
           <p className="quote">
