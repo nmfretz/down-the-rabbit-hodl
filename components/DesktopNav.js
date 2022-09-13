@@ -29,7 +29,7 @@ export const DesktopNav = ({ order, title }) => {
           // height="460.5"
           viewBox="0 0 531.74 460.5"
           overflow="visible"
-          enable-background="new 0 0 531.74 460.5"
+          enableBackground="new 0 0 531.74 460.5"
         >
           <polygon stroke="currentColor" points="530.874,0.5 265.87,459.5 0.866,0.5 " />
         </svg>
