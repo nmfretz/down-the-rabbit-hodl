@@ -273,7 +273,29 @@ body {
   }
 }
 
-@keyframes nav-position {
+@keyframes nav-position-mobile {
+  from {
+    top: -300px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+.nav-container {
+  position: fixed;
+  /* left: 0px; */
+  top: 0px;
+  height: 100vh;
+  width: 100%;
+  background: var(--clr-primary);
+  animation-name: nav-position-mobile;
+  animation-duration: 200ms;
+
+  z-index: 1;
+}
+
+@keyframes nav-position-desktop {
   from {
     left: -300px;
   }
@@ -284,16 +306,10 @@ body {
 
 @media (min-width: 50em) {
   .nav-container {
-    position: fixed;
     left: 0px;
-    top: 0px;
-    height: 100vh;
     width: 300px;
-    background: var(--clr-primary);
-    animation-name: nav-position;
+    animation-name: nav-position-desktop;
     animation-duration: 200ms;
-
-    z-index: 1;
   }
 }
 
