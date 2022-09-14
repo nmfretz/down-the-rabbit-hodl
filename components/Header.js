@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Nav from "./Nav";
 
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -12,6 +12,7 @@ const Header = () => {
       // set :root variables to dark mode colours
       document.documentElement.style.setProperty("--clr-primary", "#222");
       document.documentElement.style.setProperty("--clr-secondary", "#ccc"); // could use #eddfd6 instead. Check with Andy.
+      // document.documentElement.style.setProperty("--clr-secondary", "#eddfd6"); // could use #eddfd6 instead. Check with Andy.
       document.documentElement.style.setProperty("--clr-accent-500", "#f7931a");
     } else {
       // set ::root variables to light mode colours
@@ -23,35 +24,30 @@ const Header = () => {
 
   return (
     <header>
-      <hr className="hr-top"></hr>
-      <hr className="hr-bottom"></hr>
       <div className="header-primary">
-        <Link href="/" passHref>
-          <button className="home-btn">Home</button>
-        </Link>
         <div className="toggle-site-name-container">
-          <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+          <button className="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
             {!isMenuOpen ? (
-              <img
-                className="icon-hamburger"
-                src="/icon-hamburger.svg"
-                alt=""
-                aria-hidden="true"
-                onClick={() => setIsMenuOpen(true)}
-              />
+              <svg onClick={() => setIsMenuOpen(true)} xmlns="http://www.w3.org/2000/svg" width="25" height="21">
+                <g fill="currentColor" fill-rule="evenodd">
+                  <path d="M0 0h25v4H0zM0 7h25v4H0zM0 14h25v4H0z" />
+                </g>
+              </svg>
             ) : (
-              <img
-                className="icon-close"
-                src="/icon-close.svg"
-                alt=""
-                aria-hidden="true"
-                onClick={() => setIsMenuOpen(false)}
-              />
+              <svg onClick={() => setIsMenuOpen(false)} xmlns="http://www.w3.org/2000/svg" width="25" height="21">
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M17.925.747l2.828 2.828L13.328 11l7.425 7.425-2.828 2.828-7.425-7.425-7.425 7.425-2.828-2.828L7.671 11 .247 3.575 3.075.747 10.5 8.171 17.925.747z"
+                />
+              </svg>
             )}
 
             <span className="visually-hidden">Menu</span>
           </button>
-          <h1 className="header-site-name">Down The Rabbit Hodl</h1>
+          <Link href="/" passHref>
+            <h1 className="header-site-name">Down The Rabbit Hodl</h1>
+          </Link>
         </div>
 
         <div className="header-links-container">
@@ -104,8 +100,9 @@ const Header = () => {
           </a>
         </div>
       </div>
+
       {isMenuOpen && (
-        <div className="mobile-nav">
+        <div className="nav-container">
           <Nav setIsMenuOpen={setIsMenuOpen} />
         </div>
       )}

@@ -1,21 +1,16 @@
 ---
 title: "what is money?"
-order: 1
-cover_image: "/banner-what-is-money_cropped.jpg"
-cover_image_attribution: "Mickey's Christmas Carol - Credit: IMDB"
-cover_image_href: "https://www.imdb.com/title/tt0085936/mediaviewer/rm3403986177/?ref_=tt_md_11"
-cover_image_alt: ""
 prev_page: "home"
 next_page: "cypherpunks & digital money"
 ---
 
-It may seem like a strange place to start, but understanding the concept of money is an extremely important foundation for understanding the "why" of Bitcoin. If you haven't thought much about money before, try answering the following question: what is money and what gives it any value? Confusing right? The topic is made even more confusing by the fact that different economic schools of thought think about money differently (Austrian Economics versus Modern Monetary Theory). I encourage you to look for resources outside of the ones I have listed here to find differing or dissenting opinions on what money is.
+It may seem like a strange place to start, but understanding the concept of money is an extremely important foundation for understanding the "why" of Bitcoin. If you haven't thought much about money before, try answering the following question: what is money and what gives it any value? Confusing right? The topic is made even more confusing by the fact that different economic schools of thought think about money differently (Austrian Economics versus Modern Monetary Theory). With that in mind, I encourage you to look for resources outside of the ones I have listed here to find alternate opinions and views on what money is.
 
-Read this article by Lyn Alden. It is the best history and explanation of money that I have read online. The article includes sections on the cypherpunk movement and Bitcoin, both of which are covered later in this guide.
+Read this article by Lyn Alden. It is the best history and explanation of money that I have read online. It includes sections on the cypherpunk movement and Bitcoin near the end of the article, both of which are covered later in this guide.
 
 - <a href="https://www.lynalden.com/what-is-money/" target="_blank" rel="noreferrer">What is Money, Anyway? - Lyn Alden (2022)</a>
 
-Okay, are you back here without reading the entire article because it is quite dense and contains a lot of economic concepts? If that is the case, please at least read this much lighter history of money by Haseeb Qureshi.
+Okay, are you back here without reading the entire article because it is quite the longread? If that is the case, please at least read this much lighter history of money by Haseeb Qureshi.
 
 - <a href="https://nakamoto.com/a-brief-history-of-money/" target="_blank" rel="noreferrer">A Brief History of Money - Haseeb Qureshi (2019)</a>
 

@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 
 import { navLinks } from "../config";
-import { DesktopNav } from "../components/DesktopNav";
 
 export default function Home() {
   return (
@@ -10,13 +9,11 @@ export default function Home() {
       <Head>
         <title>Down the Rabbit Hodl</title>
       </Head>
+      <hr className="hr-top"></hr>
+      <hr className="hr-bottom"></hr>
       <div className="container">
-        <h1 className="title">
-          a guide to learning about Bitcoin
-          {/* <span className="subtitle">a guide to learning about Bitcoin</span> */}
-        </h1>
-        <DesktopNav order={""} title={"home"} />
         <div className="content">
+          <h1 className="title">a guide to learning about Bitcoin</h1>
           <div className="banner-container">
             <img className="banner-img" src="/banner-home_cropped.jpg" alt="alice in wonderland" />
             <a
@@ -25,7 +22,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Falling Alice - Credit: Anna Velichkovsky
+              Falling Alice - Anna Velichkovsky
             </a>
           </div>
           <p className="">
@@ -36,9 +33,9 @@ export default function Home() {
 
           <p>
             There is a lot of material here. If you are completely new to Bitcoin it may take significant effort on your
-            part to wrap your head around the subject, and that&apos;s completely normal! A proper understanding of
-            Bitcoin requires bringing together concepts from computer programming, cryptography, money, economics,
-            economic incentives, and game theory.
+            part to wrap your head around the subject, and that iss completely normal! A proper understanding of Bitcoin
+            requires bringing together concepts from computer programming, cryptography, money, economics, economic
+            incentives, and game theory.
           </p>
 
           <div className="guide-img">
@@ -53,7 +50,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Rollercoaster of Learning - Credit: Wait But Why
+                Rollercoaster of Learning - Wait But Why
               </a>
             </p>
           </div>
@@ -77,12 +74,12 @@ export default function Home() {
           </p>
 
           <p>
-            The topic of the actual Bitcoin protocol doesn&apos;t appear until a few sections into this guide. This is
-            because there are specific background topics and history that will help put Bitcoin into context for you.
-            That being said, if you are feeling a bit impatient and want a quick primer on what Bitcoin is before going
-            further, I recommend watching the video below by 3Blue1Brown. This is the video that sent me down the
-            Bitcoin rabbit hole back in 2017. I think it does a fantastic job directly describing what Bitcoin is
-            without introducing confusing analogies or focusing on price.
+            The topic of the actual Bitcoin protocol does not appear until a few sections into this guide. This is
+            because there is some background and history that will help put Bitcoin into context for you. That being
+            said, if you are feeling a bit impatient and want a quick primer on what Bitcoin is before going further, I
+            recommend watching the video below by 3Blue1Brown. This is the video that sent me down the Bitcoin rabbit
+            hole back in 2017. I think it does a fantastic job directly describing what Bitcoin is without introducing
+            confusing analogies or focusing on price.
           </p>
         </div>
 
@@ -104,7 +101,10 @@ export default function Home() {
                 <span>Next </span>
                 <span className="hidden-on-mobile">(What is Money?)</span>
               </p>
-              <img className="carrot-icon" src="/carrot-right2.png" />
+              <svg height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              {/* <img className="carrot-icon" src="/carrot-right2.png" /> */}
             </div>
           </Link>
         </div>

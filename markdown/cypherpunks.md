@@ -1,10 +1,5 @@
 ---
 title: "cypherpunks and digital money"
-order: 2
-cover_image: "/banner-cypherpunks_cropped.jpg"
-cover_image_attribution: "Source: image attribution here"
-cover_image_href: "#"
-cover_image_alt: ""
 prev_page: "what is money"
 next_page: "bitcoin protocol"
 ---
@@ -15,7 +10,7 @@ Read this article for a primer on the cypherpunk movement and the initial attemp
 
 - <a href="https://nakamoto.com/the-cypherpunks/" target="_blank" rel="noreferrer">The Cypherpunks - Haseeb Qureshi (2019)</a>
 
-This 4-part series by ReasonTV called Cypherpunks Write Code goes into more detail on the Cypherpunk movement.
+This 4-part series by ReasonTV called Cypherpunks Write Code goes into more detail on the Cypherpunk movement and provides an interesting look at the early days of the internet.
 
 <div class="youtube-container-small">
 <div>

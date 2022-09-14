@@ -1,7 +1,7 @@
 :root {
-  --clr-primary: #222; /* --clr-primary changes to #eddfd6 via javascript from light-mode */
-  --clr-secondary: #ccc; /* changes to #222 in light-mode */
-  --clr-accent-500: #f7931a; /* changes to #000 in light-mode */
+  --clr-primary: #eddfd6; /* --clr-primary changes to #222 via javascript in dark-mode */
+  --clr-secondary: #222; /* changes to #ccc in dark-mode */
+  --clr-accent-500: #000; /* changes to #f7931a in light-mode */
 
   --ff-primary: "Roboto", sans-serif;
   --ff-body: var(--ff-primary);
@@ -134,11 +134,13 @@ body {
 
   background-color: var(--clr-primary);
   min-height: 100vh;
+
+  /* position: relative; */
 }
 
 /* website layout */
 .layout {
-  margin: auto;
+  margin: 4rem auto;
 }
 
 /* header */
@@ -162,34 +164,25 @@ body {
 }
 
 .header-primary {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   padding-left: 0.5rem; /*mobile nav toggle has 0.5rem padding*/
+  background-color: var(--clr-primary);
+  z-index: 2;
 }
 
 .toggle-site-name-container {
   display: flex;
-}
-
-.home-btn {
-  display: none;
-
-  color: var(--clr-primary);
-  font-weight: var(--fw-semi-bold);
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  background-color: var(--clr-secondary);
-  padding: 0.25rem 1rem;
-}
-
-.home-btn:hover {
-  opacity: 0.75;
+  gap: 0rem;
 }
 
 .header-site-name {
+  cursor: pointer;
   font-family: wonderlandFont;
   font-size: 1.5rem;
 }
@@ -202,8 +195,8 @@ body {
 
 .header-links-container svg {
   color: var(--clr-secondary);
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .color-mode svg {
@@ -212,13 +205,14 @@ body {
 }
 
 .bitcoin-icon img {
-  width: 30px;
+  width: 25px;
 }
 
 @media (min-width: 50em) {
   .layout {
     margin-left: 15%;
     margin-right: 15%;
+    margin-top: 5rem;
   }
 
   .hr-top,
@@ -227,15 +221,16 @@ body {
   }
 
   .header-primary {
-    padding: 0;
+    padding: 0.5rem 1rem 0.5rem 0.5rem; /* burger menu has 0.5rem padding-left */
   }
 
-  .home-btn {
-    display: block;
+  .toggle-site-name-container {
+    display: flex;
+    gap: 0.5rem;
   }
 
   .header-site-name {
-    font-size: clamp(1.5rem, 5vw, 5rem);
+    font-size: 2rem;
   }
 
   .header-links-container {
@@ -254,42 +249,17 @@ body {
 
 /* navigation */
 
-.desktop-nav-container {
-  display: none;
-
-  margin: auto;
-  margin-bottom: 1.75rem;
-  border: 1px solid var(--clr-secondary);
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.desktop-nav-display {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.25rem 2rem;
-  align-items: center;
+.nav-toggle {
   color: var(--clr-secondary);
-}
-
-.desktop-nav-display svg {
-  width: 0.75rem;
-}
-
-.desktop-nav-title {
-  font-size: 1.5rem;
-  color: var(--clr-accent-500);
-  text-transform: capitalize;
-  font-weight: var(--fw-semi-bold);
-}
-
-.mobile-nav-toggle {
-  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0.5em;
 }
 
 @media (max-width: 50em) {
   /* max-width for toggle only */
-  .mobile-nav-toggle {
+  .nav-toggle {
     display: block;
     cursor: pointer;
     background-color: transparent;
@@ -298,24 +268,38 @@ body {
   }
 
   /* come back to this for accessibility */
-  .mobile-nav-toggle .icon-close {
+  .nav-toggle .icon-close {
     /* display: none; */
   }
 }
 
-@media (min-width: 50em) {
-  /* to prevent mobile nav staying open when resizing screen */
-  .mobile-nav {
-    display: none;
+@keyframes nav-position {
+  from {
+    left: -300px;
   }
+  to {
+    left: 0px;
+  }
+}
 
-  .desktop-nav-container {
-    display: block;
+@media (min-width: 50em) {
+  .nav-container {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 300px;
+    background: var(--clr-primary);
+    animation-name: nav-position;
+    animation-duration: 200ms;
+
+    z-index: 1;
   }
 }
 
 .nav-list {
   padding: 1rem;
+  padding-top: 5rem;
 }
 
 .nav-list li {
@@ -364,12 +348,6 @@ body {
   text-transform: capitalize;
 
   line-height: 1.5;
-}
-
-@media (min-width: 50em) {
-  .guide-title {
-    display: none;
-  }
 }
 
 .guide-img {
@@ -467,6 +445,7 @@ body {
 
 .attribution {
   font-style: italic;
+  font-size: 0.85rem;
   text-decoration: none;
   margin-bottom: var(--size-400);
 }
@@ -475,8 +454,8 @@ body {
   display: flex;
   justify-content: space-between;
   justify-content: space-between;
-  padding-top: var(--size-400);
-  padding-bottom: var(--size-600);
+  padding-top: var(--size-700);
+  padding-bottom: var(--size-700);
 }
 
 .guide-links-container-home {
@@ -489,6 +468,7 @@ body {
 
   cursor: pointer;
   font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
   text-decoration: none;
   color: inherit;
   color: var(--clr-accent-500);
@@ -508,6 +488,7 @@ body {
 /* footer */
 .footer {
   position: fixed;
+  z-index: 1;
   bottom: 0;
   width: 100%;
 

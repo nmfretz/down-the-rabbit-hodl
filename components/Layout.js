@@ -5,8 +5,8 @@ const Layout = ({ children }) => {
   return (
     <>
       {/* consider adding meta with next.seo package */}
+      <Header />
       <div className="layout">
-        <Header />
         <main>{children}</main>
       </div>
       <Footer />

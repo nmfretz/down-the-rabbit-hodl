@@ -1,19 +1,14 @@
 ---
-title: "bitcoin protocol"
-order: 3
-cover_image: "/banner-bitcoin_cropped.jpg"
-cover_image_attribution: "Source: need a source"
-cover_image_href: "https://waitbutwhy.com/2019/12/political-disney-world.html"
-cover_image_alt: ""
+title: "the bitcoin protocol"
 prev_page: "cypherpunks & digital money"
 next_page: "blockchain"
 ---
 
-Congratulations on making it all the way to the Bitcoin Protocol section! By now, you should realize that Bitcoin wasn't a random phenomenon that was invented out of the blue, but was instead built on the shoulders of giants and created to solve a specific problem.
+Congratulations on making it all the way to the Bitcoin Protocol section! By now, you should realize that Bitcoin was not a random phenomenon that was invented out of the blue, but was instead built on the shoulders of giants and created to solve a specific problem.
 
 <a href="/bitcoin-prehistory.jpg" target="_blank"><img src="/bitcoin-prehistory.jpg" /></a>
 
-<p><a class="attribution" href="https://twitter.com/AnselLindner" target="_blank" rel="noreferrer">Source: Ansel Lindner</a></p>
+<a class="attribution" href="https://twitter.com/AnselLindner" target="_blank" rel="noreferrer">Source: Ansel Lindner</a>
 
 Before learning in detail about the individual components of the Bitcoin Protocol, I think it is best to have a general understanding of what Bitcoin is as a whole. Without this general understanding, it is difficult to see how the topic you are learning about fits into the bigger picture. With that in mind, watch the two videos below that do a fantastic job directly describing what Bitcoin is without introducing confusing analogies or focusing on price. Do not worry if some of the concepts seem confusing at this point, we will be diving into them later in the guide.
 
@@ -27,7 +22,7 @@ Before learning in detail about the individual components of the Bitcoin Protoco
 </div>
 <div>
 <h3>How Bitcoin Works Under the Hood (22:25)</h3>
-<p>This video from back in 2013 has stood the test of time. There are a few out-of-date statements due to the evolving Bitcoin ecosystem (e.g., most modern user-focused wallet providers do not require you to personally download the history of the blockchain). This video is a great one to watch after the 3Blue1Brown video because it covers more aspects of the Bitcoin protocol.</p>
+<p>This video from back in 2013 has stood the test of time as one of the best descriptions of the Bitcoin Protocol. There are a few out-of-date statements due to the evolving Bitcoin ecosystem (e.g., modern wallet providers do not require you to personally download the history of the blockchain). This video is a great one to watch after the 3Blue1Brown video because it covers additional aspects of the Bitcoin protocol.</p>
 <div class="youtube-container">
 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Lx9zgZCMqXE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </div>
@@ -44,7 +39,7 @@ Read the article below on the creator of Bitcoin, Satoshi Nakamoto. It is a very
 
 The Bitcoin Protocol is a solution to the Byzantine Generals Problem for a distributed network of computers. The Byzantine Generals Problem is an allegory and thought experiment in computer science that deals with the game theory involved in how a decentralized, distributed network of computers can achieve consensus without a central trusted authority. In the case of Bitcoin, the question becomes: how can everyone in the network agree on the current state of the blockchain?
 
-First, watch this short video from Binance for a brief primer on what the Byzantine Generals Problem is and what a Byzantine Fault Tolerant System is.
+First, watch this short video from Binance for a primer on what the Byzantine Generals Problem is and what a Byzantine Fault Tolerant System is.
 
 <div class="youtube-container-small">
 <div>
@@ -88,7 +83,7 @@ Now read the original Bitcoin whitepaper. The technical jargon will likely be co
 
 ## Taking a Non-Technical Break
 
-Before delving further into the technical details of Bitcoin, I highly recommend watching the following three talks by Andreas Antonopoulos that provide non-technical context around why Bitcoin matters (obviously subjective). In my opinion, no one is a better communicator of this concept than Andreas Antonopoulos. The timestamps shown next to the video titles below are the length of the talks excluding the question and answer periods.
+Before delving further into the technical details of Bitcoin, I highly recommend watching the following talks by Andreas Antonopoulos that provide non-technical context around why Bitcoin matters (obviously subjective). In my opinion, no one is a better communicator of this concept than Andreas Antonopoulos. The timestamps shown next to the video titles below are the length of the talks excluding the question and answer periods.
 
 <div class="youtube-container-small">
 
@@ -124,17 +119,17 @@ Before delving further into the technical details of Bitcoin, I highly recommend
 </div>
 </div>
 
-<div>
+<!-- <div>
 <h3>Blockchain vs Bullshit (30:20)</h3>
 <p>This talk tackles the hype around "blockchain" and "blockchain technology".</p>
 <div class="youtube-container">
 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/SMEOKDVXlUo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </div>
-</div>
+</div> -->
 
 </div>
 
 ## Additional Resources
 
 - <a href="https://michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/" target="_blank" rel="noreferrer">How the Bitcoin Protocol Actaully Works - Michael Nielsen (2013)</a>
-- <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch02.asciidoc" target="_blank" rel="noreferrer">Chapter 1</a> and <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch01.asciidoc" target="_blank" rel="noreferrer">Chapter 2</a> of Mastering Bitcoin - Andreas Antonopoulos
+- <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch01.asciidoc" target="_blank" rel="noreferrer">Chapter 1</a> and <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch02.asciidoc" target="_blank" rel="noreferrer">Chapter 2</a> of Mastering Bitcoin - Andreas Antonopoulos
