@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Down the Rabbit Hodl - A Guide to Learning About Bitcoin
 
-## Getting Started
+https://www.downtherabbithodl.guide/
+<br />
+This website serves as a compiled guide to learning about Bitcoin. It is not an exhaustive list of resources, but rather a curated list of materials that were formative for me.
 
-First, run the development server:
+<img src="https://user-images.githubusercontent.com/85373263/190244800-61037444-8d99-44eb-807b-9ec43ac80c6f.png" />
 
-```bash
+### Features & Design
+
+- Next.js for frontend build.
+- No CSS framework. Responsive design. Dark and light mode.
+- [marked](https://www.npmjs.com/package/marked) and [gray-matter](https://www.npmjs.com/package/gray-matter) packages for parsing markdown.
+
+### TODOS
+
+- [ ] Implement search functionality
+- [ ] Clean up css variables
+- [ ] Add css animations
+
+# Setup
+
+Run `npm install`
+
+# Development
+
+Run the development sever:
+
+```
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Deployment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Currently deployed to [vercel](https://vercel.com/) at domain https://www.downtherabbithodl.guide/
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Build for production with `npm run build`.
 
-## Learn More
+# Screenshots
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img src="https://user-images.githubusercontent.com/85373263/190244800-61037444-8d99-44eb-807b-9ec43ac80c6f.png"/>
+<br />
+<img src="https://user-images.githubusercontent.com/85373263/190246178-9df39b31-dfc9-4dab-acd4-24e3670dd588.png"/>
+<br />
+<img src="https://user-images.githubusercontent.com/85373263/190246182-0c104c5f-3dd7-40e3-9f62-57a89c0c3dce.png" />
+<br />
+<img src="https://user-images.githubusercontent.com/85373263/190247268-1490cede-56e8-48b5-8419-4dec312c6b7c.png" />
+<br />
+<img src="https://user-images.githubusercontent.com/85373263/190246447-707b5cf1-12cf-4b14-b02e-0e1763fb0b84.png" width="40%"/>
