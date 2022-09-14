@@ -33,7 +33,7 @@ export default function Home() {
 
           <p>
             There is a lot of material here. If you are completely new to Bitcoin it may take significant effort on your
-            part to wrap your head around the subject, and that iss completely normal! A proper understanding of Bitcoin
+            part to wrap your head around the subject, and that is completely normal! A proper understanding of Bitcoin
             requires bringing together concepts from computer programming, cryptography, money, economics, economic
             incentives, and game theory.
           </p>
