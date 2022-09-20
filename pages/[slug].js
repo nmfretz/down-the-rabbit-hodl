@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { navLinks } from "../config";
 import Head from "next/head";
@@ -19,7 +20,12 @@ export default function PostPage({ frontmatter: { title, prev_page, next_page },
       </Head>
       <hr className="hr-top"></hr>
       <hr className="hr-bottom"></hr>
-      <div className="container">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, transform: "translateY(100px)" }}
+        animate={{ opacity: 1, transform: "translateY(0px)" }}
+        transition={{ delay: 0.5, duration: 0.5, type: "spring", bounce: 0.4, ease: "easeIn" }}
+      >
         {/* <img className="banner" src={cover_image} alt={cover_image_alt} />
         <a className="attribution" href={cover_image_href} target="_blank" rel="noreferrer">
           {cover_image_attribution}
@@ -31,7 +37,11 @@ export default function PostPage({ frontmatter: { title, prev_page, next_page },
         <div className="content" dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         <div className="guide-links-container">
           <Link href={`${navLinks[prev_page]}`} passHref>
-            <div className="guide-link">
+            <motion.div
+              className="guide-link"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
               {/* <img className="carrot-icon" src="/carrot-left2.png" /> */}
               <svg height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
@@ -45,11 +55,15 @@ export default function PostPage({ frontmatter: { title, prev_page, next_page },
               </svg>
               <span>Prev</span>
               <span className="hidden-on-mobile">{` (${prev_page})`}</span>
-            </div>
+            </motion.div>
           </Link>
           {navLinks[next_page] && (
             <Link href={`${navLinks[next_page]}`} passHref>
-              <div className="guide-link">
+              <motion.div
+                className="guide-link"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <p>
                   <span>Next </span>
                   <span className="hidden-on-mobile">{`(${next_page})`}</span>
@@ -58,11 +72,11 @@ export default function PostPage({ frontmatter: { title, prev_page, next_page },
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                 </svg>
                 {/* <img className="carrot-icon" src="/carrot-right2.png" /> */}
-              </div>
+              </motion.div>
             </Link>
           )}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

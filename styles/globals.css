@@ -145,22 +145,40 @@ body {
 
 /* header */
 
-.hr-top {
-  display: none;
+@keyframes expand {
+  0% {
+    width: 0%;
+  }
 
+  100% {
+    width: 100%;
+  }
+}
+
+.hr-top,
+.hr-bottom {
+  display: none;
+  margin: auto;
   border: none;
   border-bottom: 1px solid var(--clr-secondary);
+}
+
+.hr-top {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .hr-bottom {
-  display: none;
-
-  border: none;
-  border-bottom: 1px solid var(--clr-secondary);
-
   margin-bottom: 1.5rem;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 .header-primary {
@@ -174,6 +192,9 @@ body {
   padding-left: 0.5rem; /*mobile nav toggle has 0.5rem padding*/
   background-color: var(--clr-primary);
   z-index: 2;
+
+  /* animation */
+  /* animation: slide-down 500ms ease-in; */
 }
 
 .toggle-site-name-container {
@@ -218,6 +239,24 @@ body {
   .hr-top,
   .hr-bottom {
     display: block;
+  }
+
+  .hr-top.homepage,
+  .hr-bottom.homepage {
+    width: 0%;
+    /* animation */
+    animation-name: expand;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  .hr-top.homepage {
+    animation-delay: 500ms;
+  }
+
+  .hr-bottom.homepage {
+    animation-delay: 600ms;
   }
 
   .header-primary {
@@ -289,8 +328,9 @@ body {
   height: 100vh;
   width: 100%;
   background: var(--clr-primary);
-  animation-name: nav-position-mobile;
+  /* animation-name: nav-position-mobile;
   animation-duration: 200ms;
+  animation-timing-function: ease-in; */
 
   z-index: 1;
 }
@@ -308,8 +348,9 @@ body {
   .nav-container {
     left: 0px;
     width: 300px;
-    animation-name: nav-position-desktop;
+    /* animation-name: nav-position-desktop;
     animation-duration: 200ms;
+    animation-timing-function: ease-in; */
   }
 }
 
@@ -401,6 +442,27 @@ body {
 }
 
 /* markdown slug */
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.content.homepage {
+  /* animation */
+  position: relative;
+  opacity: 0;
+  animation-name: slide-up;
+  animation-delay: 1s;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
 
 /* subtitles */
 .content h2 {

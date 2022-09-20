@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { navLinks } from "../config";
 
@@ -9,9 +10,24 @@ export default function Home() {
       <Head>
         <title>Down the Rabbit Hodl</title>
       </Head>
-      <hr className="hr-top"></hr>
-      <hr className="hr-bottom"></hr>
-      <div className="container">
+      <motion.hr
+        className="hr-top"
+        initial={{ width: "0%" }}
+        animate={{ width: "100%" }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+      ></motion.hr>
+      <motion.hr
+        className="hr-bottom"
+        initial={{ width: "0%" }}
+        animate={{ width: "100%" }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+      ></motion.hr>
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, transform: "translateY(100px)" }}
+        animate={{ opacity: 1, transform: "translateY(0px)" }}
+        transition={{ delay: 1, duration: 0.5, type: "spring", bounce: 0.4, ease: "easeIn" }}
+      >
         <div className="content">
           <h1 className="title">a guide to learning about Bitcoin</h1>
           <div className="banner-container">
@@ -96,7 +112,11 @@ export default function Home() {
 
         <div className="guide-links-container guide-links-container-home">
           <Link href={navLinks["what is money"]} passHref>
-            <div className="guide-link">
+            <motion.div
+              className="guide-link"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
               <p>
                 <span>Next </span>
                 <span className="hidden-on-mobile">(What is Money?)</span>
@@ -105,10 +125,10 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
               </svg>
               {/* <img className="carrot-icon" src="/carrot-right2.png" /> */}
-            </div>
+            </motion.div>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

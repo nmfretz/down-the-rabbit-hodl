@@ -6,7 +6,6 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/bitcoin-logo.png" />
-          {/* <link rel="icon" href="/carrot-icon.png" /> */}
 
           <meta name="description" content="A compiled guide to learning about Bitcoin." />
           <meta property="og:title" content="Down the Rabbit Hodl - A Guide to Learning About Bitcoin" />
