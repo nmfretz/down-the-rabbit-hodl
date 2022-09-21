@@ -9,7 +9,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <AnimatePresence>
-        <motion.div key={asPath} exit={{ opacity: 0 }}>
+        {/* <motion.div key={asPath} exit={{ opacity: 0 }}> */}
+        <motion.div key={asPath}>
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>

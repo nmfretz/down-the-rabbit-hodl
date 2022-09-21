@@ -18,12 +18,25 @@ export default function PostPage({ frontmatter: { title, prev_page, next_page },
       <Head>
         <title>{capitalizedTitle}</title>
       </Head>
-      <hr className="hr-top"></hr>
-      <hr className="hr-bottom"></hr>
+      {/* <hr className="hr-top"></hr>
+      <hr className="hr-bottom"></hr> */}
+      <motion.hr
+        className="hr-top"
+        initial={{ width: "0%" }}
+        animate={{ width: "100%" }}
+        transition={{ duration: 0.5 }}
+      ></motion.hr>
+      <motion.hr
+        className="hr-bottom"
+        initial={{ width: "0%" }}
+        animate={{ width: "100%" }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+      ></motion.hr>
       <motion.div
         className="container"
         initial={{ opacity: 0, transform: "translateY(100px)" }}
         animate={{ opacity: 1, transform: "translateY(0px)" }}
+        // exit={{ opacity: 0, transition: { delay: 0 } }}
         transition={{ delay: 0.5, duration: 0.5, type: "spring", bounce: 0.4, ease: "easeIn" }}
       >
         {/* <img className="banner" src={cover_image} alt={cover_image_alt} />
