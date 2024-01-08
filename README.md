@@ -1,6 +1,5 @@
 # Down the Rabbit Hodl - A Guide to Learning About Bitcoin
 
-https://www.downtherabbithodl.guide/
 <br />
 This website serves as a compiled guide to learning about Bitcoin. It is not an exhaustive list of resources, but rather a curated list of materials that were formative for me.
 
@@ -34,7 +33,7 @@ Open http://localhost:3000 in your browser.
 
 # Deployment
 
-Currently deployed to [vercel](https://vercel.com/) at domain https://www.downtherabbithodl.guide/
+Currently deployed to [vercel](https://vercel.com/) at domain ...
 
 Build for production with `npm run build`.
 
